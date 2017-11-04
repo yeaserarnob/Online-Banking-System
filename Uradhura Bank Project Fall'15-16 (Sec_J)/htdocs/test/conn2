@@ -1,0 +1,44 @@
+<?php
+
+	define("db_host","localhost",true);
+	define("db_user","root",true);
+	define("db_pass","1214",true);
+	define("db_name","test",true);
+	
+	$con=mysql_connect(db_host,db_user,db_pass);
+	$db=mysql_select_db(db_name,$con);
+
+function login()
+{
+	session_start();
+	
+if(!empty($_POST['user']))
+{
+	$login_query="select name,pass from one where name='$_POST[user]' and pass='$_POST[pass]'";
+	
+	$result=mysql_query($login_query) or die(mysql_error());
+	
+	$row=mysql_fetch_array($result) or die(mysql_error());
+	
+	if(!empty($row['name']) AND !empty($row['pass']))
+	{
+		$_SESSION['user'] = $row['pass']; 
+			header('location:profile.html');
+		echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE..."; 
+	}
+	else
+	{
+		echo "Error Login2";
+	}
+	
+}
+
+}
+
+if(isset($_POST['submit']))
+{
+	login();
+}
+	
+	
+?>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+ <title> Sign Up </title>
+	  <link rel="icon" type="image/png" href="image/w.png" />
+</head>
+<body>
+
+<h2 style="text-align:center"> Welcome To UrAdHuRa Online Bank Service <br>__Registration From For User__ </h2>
+		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		
+		
+<table width="925" height="461" border="0" align="center" cellpadding="5" cellspacing="5">
+	  
+	  <form  method="POST" action="signup.php"> 
+  <tbody>
+    <tr>
+      <td width="452" scope="col" align="center">Name</td>
+      <td width="432" scope="col"><input type="text" name="name" id="textfield" required></td>
+    </tr>
+   
+    <tr>
+      <td width="452" scope="col" align="center">Gender</td>
+      <td><input type="radio" name="gender" id="radio" value="M">
+        Male
+        <input type="radio" name="gender" id="radio2" value="F">
+        Female</td>
+    </tr>
+	
+	 <tr>
+      <td width="452" scope="col" align="center">Acc. Type</td>
+      <td width="432" scope="col">
+									<select name="acctype">
+									<option value=" ">Select (none)</option>
+									<option value="Savings">Savings Account</option>
+									<option value="Current">Current Account</option>
+									</select></td>
+    </tr>
+
+	
+	 <tr>
+     <td width="452" scope="col" align="center">Deposit</td>
+      <td><input type="text" name="deposit" id="textfield4" required></td>
+    </tr>
+			
+    <tr>
+      <td width="452" scope="col" align="center">Login ID</td>
+      <td><input type="text" name="id" id="textfield3" required></td>
+    </tr>
+	
+	 <tr>
+	     <td width="452" scope="col" align="center">Password</td>
+      <td><input type="password" name="pass" id="password" required></td>
+    </tr>
+	
+    <tr>
+     <td width="452" scope="col" align="center">Phone No</td>
+      <td><input type="text" name="phone" id="textfield4" required></td>
+    </tr>
+   
+
+    <tr>
+      <td width="452" scope="col" align="center">Address</td>
+      <td><textarea name="address" id="textarea"></textarea required></td>
+    </tr>
+
+    <br><br/>
+	</table>
+	<table align="center">
+							<form method="POST" action="login_page.php";>
+                            <td>								
+								<input type="submit" name="submit" id="button" value="Register"> &nbsp  
+                            </td>
+						</form>
+							<form method="POST" action="signup.html";>
+                           	<td>							
+								<input type="submit" name="reset" id="button"  value="Reset" > &nbsp
+                            </td>
+                        </form>
+							<form method="POST" action="wel.html";>
+                           	<td>							
+								<input type="submit" name="home" id="button" value="Back To Home" > &nbsp
+                            </td>
+                        </form>
+                    </table>
+ 
+	
+  </tbody>
+  </form>
+</table>
+<p style="color: rgba(94,228,143,1); font-size: 40px;">&nbsp;</p>
+</body>
+</html>
